@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>SteamAPI</title>
+	</head>
+
+	<body>
+		<p>Identifiant : {$appid}</p>
+		<p>Sucess : {$success}</p>
+		<p>Type : {$gametype}</p>
+		<p>Nom : {$gamename}</p>
+		<p>Age minimum : {$gameminage}</p>
+		<p>Gratuit : {$isfree}</p>
+		{if $gametype eq 'game'} 
+		<p>
+		DLC: 
+			{foreach from=$dlcs item=$dlc}
+				{$dlc},
+			{/foreach}
+		{/if}
+		</p>
+	</body>
+</html>
