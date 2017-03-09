@@ -14,13 +14,21 @@
 		<p>Nom : {$gamename}</p>
 		<p>Age minimum : {$gameminage}</p>
 		<p>Gratuit : {$isfree}</p>
+		<p>Langues : {$languages}</p>
+		<p>Devise : {$currency}</p>
+		<p>Prix normal : {$initialPrice}</p>
+		<p>Prix soldé : {$finalPrice}</p>
+		<p>Date sortie : {$releaseDate}</p>
+		<p>Image :<p>
+		<img src={$headerImage} title="headerImage" alt="(Header img)" />
 		{if $gametype eq 'game'} 
-		<p>
-		DLC: 
-			{foreach from=$dlcs item=$dlc}
-				{$dlc},
-			{/foreach}
+			<p>
+				DLC: 
+				{foreach from=$dlcs item=$dlc}
+					{$dlc},
+				{/foreach}
+			</p>
 		{/if}
-		</p>
+		<p>Description :</p><p>{$description}</p>
 	</body>
 </html>
