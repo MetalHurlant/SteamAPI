@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>SteamAPI</title>
+	</head>
+
+	<body>
+		<p>Nombre de jeux : {$gameCount}</p>
+		<p>Temps de jeu total : {$gameplayed} heures</p>
+		<table>
+				<tr>
+					<th>id </th>
+					<th>jeu</th>
+					<th>jouées</th>
+				</tr>
+			{foreach from=$games item=$game}
+				<tr>
+					<td>{$game['id']}</td>
+					<td>{$game['name']}</td>
+					<td>{$game['tps']} minutes</td>
+				</tr>
+			{/foreach}
+		</table>
+	</body>
+</html>
