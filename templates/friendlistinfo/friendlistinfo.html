@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>SteamAPI</title>
+	</head>
+
+	<body>
+		<table>
+				<tr>
+					<th>id </th>
+					<th>nom</th>
+					<th>depuis</th>
+				</tr>
+			{foreach from=$friends item=$friend}
+				<tr>
+					<td>{$friend['id']}</td>
+					<td>{$friend['name']}</td>
+					<td>{$friend['tps']}</td>
+				</tr>
+			{/foreach}
+		</table>
+	</body>
+</html>
